@@ -18,6 +18,8 @@
   Турищев Артем (@ArtFive55555)
 ```
 
+<div align="center">
+  
 <div align="left">
 
 
