@@ -54,5 +54,6 @@
 ## Ход работы: 
 
 ```
-Дополняется...
+![telegram-cloud-photo-size-2-5380083220353242468-y](https://github.com/VsevolodLazebnyi/OOP_Team_6/assets/112974851/1e0253ae-5e2c-4dac-a7df-778e01e2ab23)
+
 ```
