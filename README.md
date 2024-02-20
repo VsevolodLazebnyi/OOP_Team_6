@@ -56,6 +56,7 @@
 ## Ход работы: 
 
 ```
-![telegram-cloud-photo-size-2-5380083220353242468-y](https://github.com/VsevolodLazebnyi/OOP_Team_6/assets/112974851/1e0253ae-5e2c-4dac-a7df-778e01e2ab23)
+<img width="1156" alt="Снимок экрана 2024-02-20 в 13 43 50" src="https://github.com/VsevolodLazebnyi/OOP_Team_6/assets/112974851/67e907ce-5168-48a3-99f5-868c6af9b37c">
+
 
 ```
