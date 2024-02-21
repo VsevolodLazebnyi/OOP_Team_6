@@ -10,7 +10,7 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyMetadata("Sentry.ProjectDirectory", "/Users/User/Desktop/RealEstatePortal/src/RealEstatePortal/")]
+[assembly: System.Reflection.AssemblyMetadata("Sentry.ProjectDirectory", "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/RealEstatePortal/")]
 
 // Создано классом WriteCodeFragment MSBuild.
 

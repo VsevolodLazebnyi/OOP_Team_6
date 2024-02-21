@@ -2,11 +2,11 @@
 
 using Itmo.Dev.Platform.Common.Extensions;
 using Itmo.Dev.Platform.Logging.Extensions;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using RealEstatePortal.Application.Extensions;
 using RealEstatePortal.Infrastructure.Persistence.Extensions;
 using RealEstatePortal.Presentation.Http.Extensions;
-using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 

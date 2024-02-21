@@ -396,11 +396,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application/RealEstatePortal.Application.csproj",
+      "projectUniqueName": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application/RealEstatePortal.Application.csproj",
       "projectName": "RealEstatePortal.Application",
-      "projectPath": "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application/RealEstatePortal.Application.csproj",
+      "projectPath": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application/RealEstatePortal.Application.csproj",
       "packagesPath": "/Users/User/.nuget/packages/",
-      "outputPath": "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application/obj/",
+      "outputPath": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application/obj/",
       "projectStyle": "PackageReference",
       "centralPackageVersionsManagementEnabled": true,
       "configFilePaths": [
@@ -416,11 +416,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application.Abstractions/RealEstatePortal.Application.Abstractions.csproj": {
-              "projectPath": "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application.Abstractions/RealEstatePortal.Application.Abstractions.csproj"
+            "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application.Abstractions/RealEstatePortal.Application.Abstractions.csproj": {
+              "projectPath": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application.Abstractions/RealEstatePortal.Application.Abstractions.csproj"
             },
-            "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application.Contracts/RealEstatePortal.Application.Contracts.csproj": {
-              "projectPath": "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application.Contracts/RealEstatePortal.Application.Contracts.csproj"
+            "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application.Contracts/RealEstatePortal.Application.Contracts.csproj": {
+              "projectPath": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application.Contracts/RealEstatePortal.Application.Contracts.csproj"
             }
           }
         }

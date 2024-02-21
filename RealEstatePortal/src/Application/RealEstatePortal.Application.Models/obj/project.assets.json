@@ -171,11 +171,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application.Models/RealEstatePortal.Application.Models.csproj",
+      "projectUniqueName": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application.Models/RealEstatePortal.Application.Models.csproj",
       "projectName": "RealEstatePortal.Application.Models",
-      "projectPath": "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application.Models/RealEstatePortal.Application.Models.csproj",
+      "projectPath": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application.Models/RealEstatePortal.Application.Models.csproj",
       "packagesPath": "/Users/User/.nuget/packages/",
-      "outputPath": "/Users/User/Desktop/RealEstatePortal/src/Application/RealEstatePortal.Application.Models/obj/",
+      "outputPath": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application.Models/obj/",
       "projectStyle": "PackageReference",
       "centralPackageVersionsManagementEnabled": true,
       "configFilePaths": [
