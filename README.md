@@ -70,8 +70,8 @@ response - Регистрация: {UserID: "12345"}
 request - Object
 response - Размещение объявления: {ObjectId: "67890"}
 	Изменение объявления: {status: "OK"}
-	Удаление объявления: {"status": "OK"}
-	Просмотр объявления: {"UserID": 12345, "Type": "", RealtorID: "12345", "RoomNumber": "123", "Square": "50", "Area": "50"}
+	Удаление объявления: {status: "OK"}
+	Просмотр объявления: {UserID: 12345, Type: "", RealtorID: "12345", RoomNumber: "123", Square: "50", "Area": "50"}
 
 request - Review
 response - Создание оценки: {ReviewId: "54321"}
@@ -80,7 +80,7 @@ response - Создание оценки: {ReviewId: "54321"}
 	Просмотр оценки: {Text: "Очень понравилось"}
 
 request - User
-response - Просмотр пользователя: {role: "Realtor", objectList: {"Object1": "67890"...}, reviewList: {"review1": "54321"...}}
+response - Просмотр пользователя: {role: "Realtor", objectList: {Object1: "67890"...}, reviewList: {review1: "54321"...}}
 
 request - Deal
 response - Заключение сделки: {DealID: "09876"}
