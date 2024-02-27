@@ -52,6 +52,7 @@ public class Object
     public int Square { get; private set; }
     public string Area { get; private set; }
     public int RoomNumber { get; private set; }
+    public Object ObjectStatus { get; private set; }
     
 }
 
@@ -62,7 +63,6 @@ public class Deal
     public DateTime DateDeal { get; private set; }
     public Customer Buyer { get; private set; }
     public Deal DealStatus { get; private set; }
-    public Object ObjectStatus { get; private set; }
     
 }
 
