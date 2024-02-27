@@ -21,8 +21,7 @@ public class Customer: User
     public int UserID { get; private set; }
     public List<string> PurchaseHistory { get; private set; } 
     
-    // добавление объектов в историю покупок
-    // размещение объявления 
+    // добавление объектов в историю покупок 
 }
 
 
@@ -30,7 +29,7 @@ public class Realtor: User
 {
     public int RealtorID { get; private set; }
 
-    // размещение объявления
+    // назначается на объявление
     // список сделок, добавление сделок
 }
 
@@ -41,14 +40,7 @@ public class Seller: User
 
     // размещение объявления
     // настройки цены, параметров объекта
-}
-
-
-public class BankAccount
-{
-    public int AccountID { get; private set; }
-    public decimal Balance { get; private set; }
-    
+    // назначает риелтора
 }
 
 
@@ -69,7 +61,8 @@ public class Deal
     public Object Object { get; private set; }
     public DateTime DateDeal { get; private set; }
     public Customer Buyer { get; private set; }
-    public BankAccount BuyerAccount { get; private set; }
+    public Deal DealStatus { get; private set; }
+    public Object ObjectStatus { get; private set; }
     
 }
 
