@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "CwpnaEvvCcD1uEoZE+Awo5H0ISOGIDXg/lAj0fZhA1v2JLEu5xj5QPwxxROnphNnr7gt0yO4MfUWxD1jg6Qj9A==",
+  "success": true,
+  "projectFilePath": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Application/RealEstatePortal.Application/RealEstatePortal.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/User/.nuget/packages/itmo.dev.editorconfig/1.0.2/itmo.dev.editorconfig.1.0.2.nupkg.sha512",
+    "/Users/User/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "/Users/User/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/User/.nuget/packages/sourcekit/1.1.24/sourcekit.1.1.24.nupkg.sha512",
+    "/Users/User/.nuget/packages/sourcekit.analyzers.mustbepartial/1.1.24/sourcekit.analyzers.mustbepartial.1.1.24.nupkg.sha512",
+    "/Users/User/.nuget/packages/sourcekit.analyzers.mustbepartial.annotations/1.1.24/sourcekit.analyzers.mustbepartial.annotations.1.1.24.nupkg.sha512",
+    "/Users/User/.nuget/packages/sourcekit.generators.builder/1.1.24/sourcekit.generators.builder.1.1.24.nupkg.sha512",
+    "/Users/User/.nuget/packages/sourcekit.generators.builder.annotations/1.1.24/sourcekit.generators.builder.annotations.1.1.24.nupkg.sha512",
+    "/Users/User/.nuget/packages/stylecop.analyzers/1.2.0-beta.435/stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
+    "/Users/User/.nuget/packages/stylecop.analyzers.unstable/1.2.0.435/stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512",
+    "/Users/User/.nuget/packages/system.linq.async/6.0.1/system.linq.async.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

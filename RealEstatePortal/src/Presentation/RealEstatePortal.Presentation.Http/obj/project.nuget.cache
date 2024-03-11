@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "vxbGBjJ0n1EWYic871cSBrE9eHs1Jxye2yfmeVJK3sHvjGAAiEJapXmkHorNliv45GS/IFYb9msLGRCN4uQFag==",
+  "success": true,
+  "projectFilePath": "/Applications/Documents/GitHub/OOP_Team_6/RealEstatePortal/src/Presentation/RealEstatePortal.Presentation.Http/RealEstatePortal.Presentation.Http.csproj",
+  "expectedPackageFiles": [
+    "/Users/User/.nuget/packages/itmo.dev.editorconfig/1.0.2/itmo.dev.editorconfig.1.0.2.nupkg.sha512",
+    "/Users/User/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "/Users/User/.nuget/packages/stylecop.analyzers/1.2.0-beta.435/stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
+    "/Users/User/.nuget/packages/stylecop.analyzers.unstable/1.2.0.435/stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512",
+    "/Users/User/.nuget/packages/system.linq.async/6.0.1/system.linq.async.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
