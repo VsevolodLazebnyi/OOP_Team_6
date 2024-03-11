@@ -1,0 +1,29 @@
+request - "Account"
+response - Регистрация: {"UserID": "12345"}
+	Изменение аккаунта: {"status": "OK"}
+	Удаление аккаунта: {"status": "OK"}
+
+request - "Object"
+response - Размещение объявления: {"ObjectId": "67890"}
+	Изменение объявления: {"status": "OK"}
+	Удаление объявления: {"status": "OK"}
+	Просмотр объявления: {"UserID": 12345, "Type": "", RealtorID: "12345",
+            "RoomNumber": "123", "Square": "50", "Area": "50"}
+
+request - "Review"
+response - Создание оценки: {"ReviewId": "54321"}
+	Изменение оценки: {status: "OK"}
+	Удаление оценки: {"status": "OK"}
+	Просмотр оценки: {"Text": "Очень понравилось"}
+
+request - "User"
+response - Просмотр пользователя: {"role": "Realtor", "objectList": {"Object1": "67890"...},
+            "reviewList": {"review1": "54321"...}}
+
+request - "Deal"
+response - Заключение сделки: {"DealID": "09876"}
+	Изменение сделки: {status: "OK"}
+	Удаление сделки: {status: "OK"}
+	Просмотр сделки: {"CustomerID": "12345", "ObjectId": "67890"}
+
+
