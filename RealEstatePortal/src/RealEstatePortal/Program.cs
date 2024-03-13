@@ -16,7 +16,7 @@ builder.Services.AddOptions<JsonSerializerSettings>();
 builder.Services.AddSingleton(sp => sp.GetRequiredService<IOptions<JsonSerializerSettings>>().Value);
 
 builder.Services.AddApplication();
-builder.Services.AddInfrastructurePersistence();
+builder.Services.AddInfrastructurePersistence(builder.Configuration);
 builder.Services
     .AddControllers()
     .AddNewtonsoftJson()
@@ -27,12 +27,16 @@ builder.Services.AddSwaggerGen().AddEndpointsApiExplorer();
 builder.Host.AddPlatformSerilog(builder.Configuration);
 builder.Services.AddUtcDateTimeProvider();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Host.AddPlatformSerilog(builder.Configuration);
+builder.Services.AddUtcDateTimeProvider();
+
 WebApplication app = builder.Build();
 
-app.UseRouting();
 app.UseSwagger();
 app.UseSwaggerUI();
-
+app.UseRouting();
 app.MapControllers();
 
 await app.RunAsync();

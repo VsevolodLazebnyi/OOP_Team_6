@@ -5,8 +5,23 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Itmo.Dev.Platform.Common" />
+        <PackageReference Include="Itmo.Dev.Platform.Logging" />
         <PackageReference Include="Itmo.Dev.Platform.Postgres"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
         <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions"/>
+        <PackageReference Include="SourceKit.Generators.Builder" />
+        <PackageReference Include="Swashbuckle.AspNetCore" />
     </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    </ItemGroup>
+
+
 
 </Project>

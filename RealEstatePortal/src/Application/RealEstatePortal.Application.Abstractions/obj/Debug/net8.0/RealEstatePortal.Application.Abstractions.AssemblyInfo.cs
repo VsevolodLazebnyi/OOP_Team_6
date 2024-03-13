@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RealEstatePortal.Application.Abstractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa467396dc0cbca83aff11bc08a00b78049ed33e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RealEstatePortal.Application.Abstractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RealEstatePortal.Application.Abstractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
