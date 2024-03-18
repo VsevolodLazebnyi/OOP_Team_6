@@ -1,0 +1,26 @@
+version: '25.0.3,'
+
+services:
+  db:
+    container_name: pg_db_OOP6
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=root
+    image: postgres:16.2-bullseye
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
+  pgadmin4: 
+    container_name: pgAdmin
+    image: elestio/pgadmin:REL-8_3 
+    environment:
+        PGADMIN_DEFAULT_EMAIL: sample@gmail.com
+        PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+      
+
+      
+  
