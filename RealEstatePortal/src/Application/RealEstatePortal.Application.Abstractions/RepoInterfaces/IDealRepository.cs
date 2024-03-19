@@ -4,11 +4,11 @@ namespace RealEstatePortal.Application.Abstractions.RepoInterfaces;
 
 public interface IDealRepository
 {
-    Task<string> CreateDeal(DealModel dealModel);
+    Task<Guid> CreateDeal(DealModel dealModel);
 
-    Task<DealModel> FindDealById(int dealId);
+    Task<DealModel> FindDealById(Guid dealId);
 
     Task UpdateDeal(DealModel dealModel);
 
-    Task DeleteDeal(int dealId);
+    Task DeleteDeal(Guid dealId);
 }

@@ -2,15 +2,15 @@
 
 public class DealEntity
 {
-    public int DealId { get; set; }
+    public Guid DealId { get; set; }
 
-    public int ObjectId { get; set; }
+    public Guid ObjectId { get; set; }
 
-    public int CustomerId { get; set; }
+    public Guid CustomerId { get; set; }
 
-    public int RealtorId { get; set; }
+    public Guid RealtorId { get; set; }
 
-    public int DealStatusId { get; set; }
+    public Guid DealStatusId { get; set; }
 
     public DateTime DateDeal { get; set; }
 }

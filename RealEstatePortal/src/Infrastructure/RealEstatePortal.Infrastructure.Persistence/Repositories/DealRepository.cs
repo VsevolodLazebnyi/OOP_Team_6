@@ -18,26 +18,27 @@ public class DealRepository : IDealRepository
         _mapper = mapper; // Инициализируем поле маппера
     }
 
-    public async Task<int> CreateDeal(DealModel dealModel)
+    public async Task<Guid> CreateDeal(DealModel dealModel)
     {
         var newDealEntity = new DealEntity
         {
-            ObjectId = dealModel.ObjectId(),
-            CustomerId = dealModel.CustomerId(),
-            RealtorId = dealModel.RealtorId(),
-            DealStatusId = dealModel.DealStatusId(),
-            DateDeal = dealModel.DateDeal(),
+            DealId = Guid.NewGuid(),
+            ObjectId = dealModel.ObjectId,
+            CustomerId = dealModel.CustomerId,
+            RealtorId = dealModel.RealtorId,
+            DealStatusId = dealModel.DealStatusId,
+            DateDeal = dealModel.DateDeal,
         };
 
-        await _context.Object.AddAsync(newDealEntity);
+        await _context.Deal.AddAsync(newDealEntity);
         await _context.SaveChangesAsync();
-        return newDealEntity.Id;
+        return newDealEntity.DealId;
     }
 
-    public async Task<DealModel> FindDealById(int dealId)
+    public async Task<DealModel> FindDealById(Guid dealId)
     {
         DealEntity? dealEntity = await _context.Deal.FirstOrDefaultAsync(t => t.DealId == dealId);
-        return dealEntity != null ? _mapper.Map<DealModel>(dealEntity) : null; // Используем маппер для преобразования сущности в модель
+        return (dealEntity != null ? _mapper.Map<DealModel>(dealEntity) : null)!; // Используем маппер для преобразования сущности в модель
     }
 
     public async Task UpdateDeal(DealModel dealModel)
@@ -47,15 +48,15 @@ public class DealRepository : IDealRepository
         if (existingDealEntity != null)
         {
             // Обновляем данные существующей сделки на основе переданной сделки
-            existingDealEntity.Buyer = deal.GetBuyerId();
-            existingDealEntity.Seller = deal.GetSellerId();
+            existingDealEntity.CustomerId = dealModel.CustomerId;
+            existingDealEntity.RealtorId = dealModel.RealtorId;
 
             _context.Deal.Update(existingDealEntity);
             await _context.SaveChangesAsync();
         }
     }
 
-    public async Task DeleteDeal(int dealId)
+    public async Task DeleteDeal(Guid dealId)
     {
         DealEntity? dealEntity = await _context.Deal.FirstOrDefaultAsync(t => t.DealId == dealId);
 

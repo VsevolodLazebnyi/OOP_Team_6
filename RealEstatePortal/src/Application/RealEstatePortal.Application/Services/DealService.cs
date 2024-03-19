@@ -13,7 +13,7 @@ public class DealService : IDealService
         _dealRepository = dealRepository;
     }
 
-    public async Task<DealModel> GetDealAsync(int dealId)
+    public async Task<DealModel> GetDealAsync(Guid dealId)
     {
         DealModel deal = await _dealRepository.FindDealById(dealId);
         if (deal == null)
@@ -24,24 +24,24 @@ public class DealService : IDealService
         return deal;
     }
 
-    public async Task<string> AddNewDeal(DealModel dealModel)
+    public async Task<Guid> AddNewDeal(DealModel dealModel)
     {
-        string id = await _dealRepository.CreateDeal(dealModel);
+        Guid id = await _dealRepository.CreateDeal(dealModel);
         return id;
     }
 
-    public async Task DeleteDeal(int dealId)
+    public async Task DeleteDeal(Guid dealId)
     {
         await _dealRepository.DeleteDeal(dealId);
     }
 
-    public async Task PutRealtorToDeal(int dealId, int userId)
+    public async Task PutRealtorToDeal(Guid dealId, int userId)
     {
         DealModel deal = await _dealRepository.FindDealById(dealId);
         if (deal != null)
         {
             deal.RealtorId = userId;
-            await _dealRepository.UpdateDeal(deal); 
+            await _dealRepository.UpdateDeal(deal);
         }
         else
         {

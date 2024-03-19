@@ -2,7 +2,7 @@
 
 public class DealModel
 {
-    public int DealId { get; set; }
+    public Guid DealId { get; set; }
 
     public int ObjectId { get; set; }
 

@@ -42,8 +42,8 @@ public class UserController : Controller
         try
         {
             UserModel userModel = _mapper.Map<UserModel>(request);
-            Guid userId = await _userService.AddNewUser(userModel); // спасите, пожалуйста
-            var responseDto = new CreateUserResponseDto { UserId = userId }; // я уже не понимаю почему не мапится
+            Guid userId = await _userService.AddNewUser(userModel);
+            var responseDto = new CreateUserResponseDto { UserId = userId };
             return Ok(responseDto);
         }
         catch (Exception ex)

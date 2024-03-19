@@ -3,15 +3,15 @@
 namespace RealEstatePortal.Application.Contracts.ServiceInterfaces;
 public interface IDealService
 {
-    Task<DealModel> GetDealAsync(int dealId);
+    Task<DealModel> GetDealAsync(Guid dealId);
 
-    Task<string> AddNewDeal(DealModel dealModel);
+    Task<Guid> AddNewDeal(DealModel dealModel);
 
-    Task DeleteDeal(int dealId);
+    Task DeleteDeal(Guid dealId);
 
-    Task PutRealtorToDeal(int dealId, int userId);
+    Task PutRealtorToDeal(Guid dealId, Guid userId);
 
-    Task<DealModel> GetDealStatus(int dealId);
+    Task<DealModel> GetDealStatus(Guid dealId);
 
-    Task<int> GetBuyerOfDeal(int dealId);
+    Task<Guid> GetBuyerOfDeal(Guid dealId);
 }
