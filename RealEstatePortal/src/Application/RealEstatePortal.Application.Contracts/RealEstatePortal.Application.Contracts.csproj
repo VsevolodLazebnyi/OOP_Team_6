@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
+        <ProjectReference Include="..\RealEstatePortal.Application.Abstractions\RealEstatePortal.Application.Abstractions.csproj" />
         <ProjectReference Include="..\RealEstatePortal.Application.Models\RealEstatePortal.Application.Models.csproj"/>
     </ItemGroup>
 

@@ -4,11 +4,11 @@ namespace RealEstatePortal.Application.Abstractions.RepoInterfaces;
 
 public interface IUserRepository
 {
-    Task<string> CreateUser(UserModel userModel);
+    Task<Guid> CreateUser(UserModel userModel);
 
-    Task<UserModel> FindUserById(int userId); // исправил такиештуки везде Task***<Int16***<UserModel>> FindUserById(int userId);
+    Task<UserModel> FindUserById(Guid userId);
 
     Task UpdateUser(UserModel userModel);
 
-    Task DeleteUser(int userId);
+    Task DeleteUser(Guid userId);
 }

@@ -4,15 +4,15 @@ namespace RealEstatePortal.Application.Contracts.ServiceInterfaces;
 
 public interface IObjectService
 {
-    Task<ObjectModel> GetObjectAsync(int objectId);
+    Task<ObjectModel> GetObjectAsync(Guid objectId);
 
-    Task AddNewObject(ObjectModel objectModel);
+    Task<Guid> AddNewObject(ObjectModel objectModel);
 
-    Task DeleteObject(int objectId);
+    Task DeleteObject(Guid objectId);
 
-    Task PutRealtorToObject(int objectId, int userId);
+    Task PutRealtorToObject(Guid objectId, Guid userId);
 
-    Task GetSellerOfObject(int objectId, int userId);
+    Task<UserModel> GetSellerOfObject(Guid objectId, Guid userId);
 
-    Task ChangeRealtorToObject(int objectId, int userId);
+    Task ChangeRealtorToObject(Guid objectId, Guid userId);
 }

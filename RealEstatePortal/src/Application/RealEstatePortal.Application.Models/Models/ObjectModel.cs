@@ -3,9 +3,11 @@ namespace RealEstatePortal.Application.Models.Models;
 
 public class ObjectModel
 {
+    public Guid ObjectId { get; set; }
+
     public Guid SellerId { get; set; }
 
-    public int RealtorId { get; set; }
+    public Guid RealtorId { get; set; }
 
     public int Square { get; set; }
 

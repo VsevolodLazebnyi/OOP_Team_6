@@ -1,6 +1,6 @@
 ﻿namespace RealEstatePortal.Application.Models.Dto.Deal.AddNewDeal;
 
-public class AddNewDealResponseDto(int dealId)
+public class AddNewDealResponseDto(Guid dealId)
 {
-    public int DealId { get; set; } = dealId;
+    public Guid DealId { get; set; } = dealId;
 }

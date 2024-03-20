@@ -4,11 +4,11 @@ namespace RealEstatePortal.Application.Abstractions.RepoInterfaces;
 
 public interface IReviewRepository
 {
-    Task<string> CreateReview(ReviewModel reviewModel);
+    Task<Guid> CreateReview(ReviewModel reviewModel);
 
-    Task<ReviewModel> FindReviewById(int reviewId);
+    Task<ReviewModel> FindReviewById(Guid reviewId);
 
     Task UpdateReview(ReviewModel reviewModel);
 
-    Task DeleteReview(int reviewId);
+    Task DeleteReview(Guid reviewId);
 }

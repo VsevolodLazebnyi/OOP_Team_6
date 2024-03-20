@@ -10,7 +10,7 @@ public class DealEntity
 
     public Guid RealtorId { get; set; }
 
-    public Guid DealStatusId { get; set; }
+    public int DealStatusId { get; set; }
 
     public DateTime DateDeal { get; set; }
 }

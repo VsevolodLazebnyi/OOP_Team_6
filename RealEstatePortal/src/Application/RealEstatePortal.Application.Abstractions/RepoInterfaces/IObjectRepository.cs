@@ -4,11 +4,11 @@ namespace RealEstatePortal.Application.Abstractions.RepoInterfaces;
 
 public interface IObjectRepository
 {
-    Task<string> CreateObject(ObjectModel objectModel);
+    Task<Guid> CreateObject(ObjectModel objectModel);
 
-    Task<ObjectModel> FindObjectById(int objectId);
+    Task<ObjectModel> FindObjectById(Guid objectId);
 
     Task UpdateObject(ObjectModel objModel);
 
-    Task DeleteObject(int objectId);
+    Task DeleteObject(Guid objectId);
 }

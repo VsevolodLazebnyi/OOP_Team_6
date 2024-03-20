@@ -8,9 +8,9 @@ public class ReviewEntity
 
     public int Rating { get; set; }
 
-    public int SenderId { get; set; }
+    public Guid SenderId { get; set; }
 
-    public DateTime DateDeal { get; set; }
+    public DateTime DateOfReview { get; set; }
 
-    public int RecieverId { get; set; }
+    public Guid RecieverId { get; set; }
 }

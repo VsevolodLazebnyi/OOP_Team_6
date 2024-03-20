@@ -1,12 +1,12 @@
 ﻿namespace RealEstatePortal.Application.Models.Dto.Deal.GetDeal;
 
-public class GetDealResponseDto(int objectId, int customerId, int realtorId, int dealStatusId, DateTime dateDeal)
+public class GetDealResponseDto(Guid objectId, Guid customerId, Guid realtorId, int dealStatusId, DateTime dateDeal)
 {
-    public int ObjectId { get; set; } = objectId;
+    public Guid ObjectId { get; set; } = objectId;
 
-    public int CustomerId { get; set; } = customerId;
+    public Guid CustomerId { get; set; } = customerId;
 
-    public int RealtorId { get; set; } = realtorId;
+    public Guid RealtorId { get; set; } = realtorId;
 
     public int DealStatusId { get; set; } = dealStatusId;
 

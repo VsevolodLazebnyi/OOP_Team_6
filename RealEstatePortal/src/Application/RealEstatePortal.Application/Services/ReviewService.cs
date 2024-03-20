@@ -1,4 +1,6 @@
-﻿using RealEstatePortal.Application.Abstractions.RepoInterfaces;
+﻿#pragma warning disable CA1725
+
+using RealEstatePortal.Application.Abstractions.RepoInterfaces;
 using RealEstatePortal.Application.Contracts.ServiceInterfaces;
 using RealEstatePortal.Application.Models.Models;
 
@@ -15,43 +17,70 @@ public class ReviewService : IReviewService
 
     public async Task<ReviewModel> GetReviewAsync(Guid reviewId)
     {
-        var review = await _reviewRepository.FindReviewById(reviewId);
+        ReviewModel review = await _reviewRepository.FindReviewById(reviewId);
         if (review == null)
         {
-            throw new Exception($"Review with ID {reviewId} not found");
+            throw new Exception($"Review with ID not found");
         }
 
         return review;
     }
 
-    public async Task AddNewReview(ReviewModel reviewModel)
+    public async Task<Guid> AddNewReview(ReviewModel reviewModel)
     {
-        await _reviewRepository.CreateReview(reviewModel);
+        Guid id = await _reviewRepository.CreateReview(reviewModel);
+        return id;
     }
 
-    public Task PutUserToReview(int reviewId, int userId)
+    public async Task PutUserToReview(Guid reviewId, Guid userId)
     {
-        throw new NotImplementedException();
+        ReviewModel review = await _reviewRepository.FindReviewById(reviewId);
+        if (review != null)
+        {
+            review.SenderId = userId; // поставила оправителя отзыва
+            await _reviewRepository.UpdateReview(review);
+        }
+        else
+        {
+            throw new Exception($"Object with ID {reviewId} not found");
+        }
     }
 
-    public Task PutReviewToObject(int reviewId, int objectId)
+    public async Task PutReviewToObject(Guid reviewId, Guid recieverId)
     {
-        // надо соединить с ентити и репой
+        ReviewModel review = await _reviewRepository.FindReviewById(reviewId);
+        if (review != null)
+        {
+            review.RecieverId = recieverId; // поставила отзыв на получателя (читай: объект или риелтора)
+            await _reviewRepository.UpdateReview(review);
+        }
+        else
+        {
+            throw new Exception($"Object with ID {reviewId} not found");
+        }
     }
 
-    public Task ChangeReview(int reviewId)
+    // public Task ChangeReview(Guid reviewId)
+    // {
+    //     // надо соединить с ентити и репой
+    // }
+    public async Task PutReviewToUser(Guid reviewId, Guid objectId, Guid senderId)
     {
-        // надо соединить с ентити и репой
+        ReviewModel review = await _reviewRepository.FindReviewById(reviewId);
+        if (review != null)
+        {
+            review.SenderId = senderId; // создатель отзыва
+            await _reviewRepository.UpdateReview(review);
+        }
+        else
+        {
+            throw new Exception($"Object with ID {reviewId} not found");
+        }
     }
 
-    public Task PutReviewToUser(int reviewId, int objectId, int userId)
+    public async Task DeleteReview(Guid reviewId, Guid senderId)
     {
-        // надо соединить с ентити и репой
-    }
-
-    public async Task DeleteReview(Guid reviewId, int senderId)
-    {
-        var review = await _reviewRepository.FindReviewById(reviewId);
+        ReviewModel review = await _reviewRepository.FindReviewById(reviewId);
         if (review == null)
         {
             throw new Exception($"Review with ID {reviewId} not found");
@@ -65,27 +94,27 @@ public class ReviewService : IReviewService
         await _reviewRepository.DeleteReview(reviewId);
     }
 
-    public async Task ChangeReview(Guid reviewId, string newText, int newRating)
+    public async Task ChangeReview(Guid reviewId, string textOfReview, int rating)
     {
-        var review = await _reviewRepository.FindReviewById(reviewId);
+        ReviewModel review = await _reviewRepository.FindReviewById(reviewId);
         if (review == null)
         {
             throw new Exception($"Review with ID {reviewId} not found");
         }
 
-        review.TextOfReview = newText;
-        review.Rating = newRating;
+        review.TextOfReview = textOfReview;
+        review.Rating = rating;
 
         await _reviewRepository.UpdateReview(review);
     }
 
-    public Task<ReviewModel> GetReviewAsync(int reviewId)
-    {
-        // надо соединить с ентити и репой
-    }
+    // public Task<ReviewModel> GetReviewAsync(Guid reviewId)
+    // {
+    //     // надо соединить с ентити и репой
+    // }
 
-    Task IReviewService.AddNewReview(ReviewModel reviewModel)
-    {
-        return AddNewReview(reviewModel);
-    }
+    // Task IReviewService.AddNewReview(ReviewModel reviewModel)
+    // {
+    //     return AddNewReview(reviewModel);
+    // }
 }

@@ -1,8 +1,8 @@
 ﻿namespace RealEstatePortal.Application.Models.Dto.Review.DeleteReview;
 
-public class DeleteReviewRequestDto(Guid reviewId, int senderId)
+public class DeleteReviewRequestDto(Guid reviewId, Guid senderId)
 {
     public Guid ReviewId { get; set; } = reviewId;
 
-    public int SenderId { get; set; } = senderId; // я такпонимаю этот парень ответственныйза выстовлениеоценки
+    public Guid SenderId { get; set; } = senderId; // я такпонимаю этот парень ответственныйза выстовлениеоценки
 }

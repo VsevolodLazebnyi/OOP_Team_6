@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yIHMiOYhqbyldupT80Rpro46oPNoC7HgsNo9zJ0QAghUR9ROW3z9fh1ZUHzp3EjXm4R9eu01R+Sz6u/ijr8w0Q==",
+  "dgSpecHash": "LlNBDec7/90l0TBVQ24SdVGfafkh6Yx0TC5pepFU0eTONwtiiErtBRSie1fn+TDqXCvIiv4FEtXINRglB+M6Vg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\RealEstatePortal\\RealEstatePortal.csproj",
   "expectedPackageFiles": [
@@ -49,7 +49,7 @@
     "C:\\Users\\Vllazebnyi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Vllazebnyi\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Vllazebnyi\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
-    "C:\\Users\\Vllazebnyi\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
+    "C:\\Users\\Vllazebnyi\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Vllazebnyi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Vllazebnyi\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
     "C:\\Users\\Vllazebnyi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",

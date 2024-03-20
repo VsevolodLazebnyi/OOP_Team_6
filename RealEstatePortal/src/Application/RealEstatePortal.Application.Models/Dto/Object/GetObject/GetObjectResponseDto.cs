@@ -1,10 +1,10 @@
 ﻿namespace RealEstatePortal.Application.Models.Dto.Object.GetObject;
 
-public class GetObjectResponseDto(int sellerId, int realtorId, int square, string area, int roomNumber, int objectStatusId)
+public class GetObjectResponseDto(Guid sellerId, Guid realtorId, int square, string area, int roomNumber, int objectStatusId)
 {
-    public int SellerId { get; set; } = sellerId;
+    public Guid SellerId { get; set; } = sellerId;
 
-    public int RealtorId { get; set; } = realtorId;
+    public Guid RealtorId { get; set; } = realtorId;
 
     public int Square { get; set; } = square;
 

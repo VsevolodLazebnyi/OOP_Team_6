@@ -1,5 +1,3 @@
-namespace RealEstatePortal.Infrastructure.Persistence.Extensions;
-
 using Itmo.Dev.Platform.Postgres.Extensions;
 using Itmo.Dev.Platform.Postgres.Plugins;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,6 +5,7 @@ using RealEstatePortal.Application.Abstractions.Persistence;
 using RealEstatePortal.Infrastructure.Persistence.Migrations;
 using RealEstatePortal.Infrastructure.Persistence.Plugins;
 
+namespace RealEstatePortal.Infrastructure.Persistence.Extensions;
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddInfrastructurePersistence(this IServiceCollection collection)

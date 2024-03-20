@@ -1,6 +1,6 @@
 ﻿namespace RealEstatePortal.Application.Models.Dto.User.ChangeUser;
 
-public class ChangeUserRequestDto(Guid userId, string name, string surname, string email, string phone, string roleId)
+public class ChangeUserRequestDto(Guid userId, string name, string surname, string email, string phone, int roleId)
 {
     public Guid UserId { get; set; } = userId;
 
@@ -12,5 +12,5 @@ public class ChangeUserRequestDto(Guid userId, string name, string surname, stri
 
     public string Phone { get; set; } = phone;
 
-    public string RoleId { get; set; } = roleId;
+    public int RoleId { get; set; } = roleId;
 }

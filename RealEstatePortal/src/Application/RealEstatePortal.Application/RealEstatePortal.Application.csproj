@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
+        <ProjectReference Include="..\..\Infrastructure\RealEstatePortal.Infrastructure.Persistence\RealEstatePortal.Infrastructure.Persistence.csproj" />
         <ProjectReference Include="..\RealEstatePortal.Application.Abstractions\RealEstatePortal.Application.Abstractions.csproj"/>
         <ProjectReference Include="..\RealEstatePortal.Application.Contracts\RealEstatePortal.Application.Contracts.csproj"/>
     </ItemGroup>
@@ -21,6 +22,7 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Configuration" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"/>
         <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />

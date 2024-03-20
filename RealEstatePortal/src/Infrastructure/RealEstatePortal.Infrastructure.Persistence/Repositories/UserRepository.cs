@@ -1,80 +1,70 @@
-﻿using RealEstatePortal.Application.Abstractions.RepoInterfaces;
+﻿using AutoMapper; // используя автомапер отказываемся от собственных маперов, так понимаю
+using Microsoft.EntityFrameworkCore;
+using RealEstatePortal.Application.Abstractions.RepoInterfaces;
 using RealEstatePortal.Application.Models.Models;
 using RealEstatePortal.Infrastructure.Persistence.Contexts;
+using RealEstatePortal.Infrastructure.Persistence.Entity;
 
 namespace RealEstatePortal.Infrastructure.Persistence.Repositories;
-
 
 public class UserRepository : IUserRepository
 {
     private readonly ApplicationDbContext _context; // Замените YourDbContext на ваш контекст базы данных
+    private readonly IMapper _mapper;
 
-    public UserRepository(ApplicationDbContext context)
+    public UserRepository(ApplicationDbContext context, IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
-    public async Task<string> CreateUser(UserModel userModel)
+    public async Task<Guid> CreateUser(UserModel userModel)
     {
         var newUserEntity = new UserEntity
         {
-            Id = Generator.GenerateRandomId(IdLength),
-            Username = userModel.GetUsername(),
-            Name = userModel.GetName(),
-            Surname = userModel.GetSurname(),
-            Phone = userModel.GetPhone(),
-            Email = userModel.GetEmail(),
-            Role = userModel.GetRole()   
+            UserId = Guid.NewGuid(),
+
+            // Username = userModel.GetUsername(),
+            Name = userModel.Name,
+            Surname = userModel.Surname,
+            Phone = userModel.Phone,
+            Email = userModel.Email,
+            RoleId = userModel.RoleId,
         };
 
-        await _context.Object.AddAsync(newUserEntity);
+        await _context.User.AddAsync(newUserEntity);
         await _context.SaveChangesAsync();
-        return newUserEntity.Id;
+        return newUserEntity.UserId;
     }
 
-    Task<UserModel> IUserRepository.FindUserById(int userId)
+    public async Task<UserModel> FindUserById(Guid userId)
     {
-        throw new NotImplementedException();
-    }
-
-    Task IUserRepository.UpdateUser(UserModel userModel)
-    {
-        return UpdateUser(userModel);
-    }
-
-    public Task<string> CreateUser(UserModel userModel)
-    {
-        throw new NotImplementedException();
-    }
-
-    public async Task<Int16<UserModel>> FindUserById(int userId)
-    {
-        var userEntity = await _context.User.FirstOrDefaultAsync(t: userEntity => t.Id == userId);
-        return (userEntity != null ? EntityMapper.MapObjectEntityToModel(userEntity) : null)!;
+        UserEntity? userEntity = await _context.User.FirstOrDefaultAsync(t => t.UserId == userId);
+        return (userEntity != null ? _mapper.Map<UserModel>(userEntity) : null)!;
     }
 
     public async Task UpdateUser(UserModel userModel)
     {
-        var existingUserEntity = await _context.User.FirstOrDefaultAsync(t => t.Id == user.Id);
-    
+        UserEntity? existingUserEntity = await _context.User.FirstOrDefaultAsync(t => t.UserId == userModel.UserId);
+
         if (existingUserEntity != null)
         {
-            existingUserEntity.Username = userModel.GetUsername();
-            existingUserEntity.Name = userModel.GetName();
-            existingUserEntity.Surname = userModel.GetSurname();
-            existingUserEntity.Phone = userModel.GetPhone();
-            existingUserEntity.Email = userModel.GetEmail();
-            existingUserEntity.Role = userModel.GetRole();
+            // existingUserEntity.Username = userModel.Username;
+            existingUserEntity.Name = userModel.Name;
+            existingUserEntity.Surname = userModel.Surname;
+            existingUserEntity.Phone = userModel.Phone;
+            existingUserEntity.Email = userModel.Email;
+            existingUserEntity.RoleId = userModel.RoleId;
 
             _context.User.Update(existingUserEntity);
             await _context.SaveChangesAsync();
         }
     }
 
-    public async Task DeleteUser(int userId)
+    public async Task DeleteUser(Guid userId)
     {
-        var userEntity = await _context.User.FirstOrDefaultAsync(t => t.Id == userId);
-    
+        UserEntity? userEntity = await _context.User.FirstOrDefaultAsync(t => t.UserId == userId);
+
         if (userEntity != null)
         {
             _context.User.Remove(userEntity);

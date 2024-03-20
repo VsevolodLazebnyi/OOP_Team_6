@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RealEstatePortal.Application.Contracts.ServiceInterfaces;
 using RealEstatePortal.Application.Models.Dto.Object.AddNewObject;
 
@@ -23,7 +22,7 @@ public class ObjectController : Controller
     }
 
     [HttpGet("{objectId}")]
-    public async Task<ActionResult<ObjectModel>> GetObjectAsync(int objectId)
+    public async Task<ActionResult<ObjectModel>> GetObjectAsync(Guid objectId)
     {
         try
         {
@@ -61,7 +60,7 @@ public class ObjectController : Controller
     }
 
     [HttpDelete("{objectId}")]
-    public async Task<ActionResult> DeleteObject(int objectId)
+    public async Task<ActionResult> DeleteObject(Guid objectId)
     {
         try
         {
@@ -75,7 +74,7 @@ public class ObjectController : Controller
     }
 
     [HttpPut("{objectId}/realtor/{userId}")]
-    public async Task<ActionResult> PutRealtorToObject(int objectId, int userId)
+    public async Task<ActionResult> PutRealtorToObject(Guid objectId, Guid userId)
     {
         try
         {
@@ -89,7 +88,7 @@ public class ObjectController : Controller
     }
 
     [HttpGet("{objectId}/seller/{userId}")]
-    public async Task<ActionResult> GetSellerOfObject(int objectId, int userId)
+    public async Task<ActionResult> GetSellerOfObject(Guid objectId, Guid userId)
     {
         try
         {
@@ -103,7 +102,7 @@ public class ObjectController : Controller
     }
 
     [HttpPut("{objectId}/change-realtor/{userId}")]
-    public async Task<ActionResult> ChangeRealtorToObject(int objectId, int userId)
+    public async Task<ActionResult> ChangeRealtorToObject(Guid objectId, Guid userId)
     {
         try
         {

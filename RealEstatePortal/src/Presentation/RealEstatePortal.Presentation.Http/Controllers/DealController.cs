@@ -1,6 +1,4 @@
-﻿using AutoMapper; //хз как артем обошёлся без мапера
-
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RealEstatePortal.Application.Contracts.ServiceInterfaces;
 using RealEstatePortal.Application.Models.Dto.Deal.AddNewDeal;
 using RealEstatePortal.Application.Models.Dto.Deal.GetDeal;
@@ -21,7 +19,7 @@ public class DealController : Controller
     }
 
     [HttpGet("{dealId}")]
-    public async Task<ActionResult<GetDealResponseDto>> GetDealAsync(int dealId)
+    public async Task<ActionResult<GetDealResponseDto>> GetDealAsync(Guid dealId)
     {
         try
         {
@@ -55,7 +53,7 @@ public class DealController : Controller
     }
 
     [HttpDelete("{dealId}")]
-    public async Task<ActionResult> DeleteDeal(int dealId)
+    public async Task<ActionResult> DeleteDeal(Guid dealId)
     {
         try
         {
@@ -69,7 +67,7 @@ public class DealController : Controller
     }
 
     [HttpPut("{dealId}/realtor/{userId}")]
-    public async Task<ActionResult> PutRealtorToDeal(int dealId, int userId)
+    public async Task<ActionResult> PutRealtorToDeal(Guid dealId, Guid userId)
     {
         try
         {
@@ -83,11 +81,11 @@ public class DealController : Controller
     }
 
     [HttpGet("{dealId}/status")]
-    public async Task<ActionResult> GetDealStatus(int dealId)
+    public async Task<ActionResult> GetDealStatus(Guid dealId)
     {
         try
         {
-            DealModel status = await _dealService.GetDealStatus(dealId);
+            int status = await _dealService.GetDealStatus(dealId);
             return Ok(status);
         }
         catch (Exception ex)
@@ -97,11 +95,11 @@ public class DealController : Controller
     }
 
     [HttpGet("{dealId}/buyer/{userId}")]
-    public async Task<ActionResult> GetBuyerOfDeal(int dealId)
+    public async Task<ActionResult> GetBuyerOfDeal(Guid dealId)
     {
         try
         {
-            int buyer = await _dealService.GetBuyerOfDeal(dealId);
+            Guid buyer = await _dealService.GetBuyerOfDeal(dealId);
             return Ok(buyer);
         }
         catch (Exception ex)

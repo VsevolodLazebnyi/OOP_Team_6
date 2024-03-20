@@ -4,9 +4,9 @@ public class ObjectEntity
 {
     public Guid ObjectId { get; set; }
 
-    public int SellerId { get; set; }
+    public Guid SellerId { get; set; }
 
-    public int RealtorId { get; set; }
+    public Guid RealtorId { get; set; }
 
     public int Square { get; set; }
 

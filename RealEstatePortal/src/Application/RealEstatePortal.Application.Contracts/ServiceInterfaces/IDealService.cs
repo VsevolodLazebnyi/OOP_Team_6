@@ -11,7 +11,7 @@ public interface IDealService
 
     Task PutRealtorToDeal(Guid dealId, Guid userId);
 
-    Task<DealModel> GetDealStatus(Guid dealId);
+    Task<int> GetDealStatus(Guid dealId);
 
     Task<Guid> GetBuyerOfDeal(Guid dealId);
 }

@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RealEstatePortal.Application.Contracts.ServiceInterfaces;
 using RealEstatePortal.Application.Models.Dto.Review.AddNewReview;
 using RealEstatePortal.Application.Models.Dto.Review.ChangeReview;
@@ -25,12 +24,8 @@ public class ReviewController : ControllerBase
     {
         try
         {
-            var review = await _reviewService.GetReviewAsync(reviewId);
-            var responseDto = new GetReviewResponseDto
-            {
-                TextOfReview = review.TextOfReview,
-                Rating = review.Rating
-            };
+            ReviewModel review = await _reviewService.GetReviewAsync(reviewId);
+            var responseDto = new GetReviewResponseDto(review.TextOfReview, review.Rating);
             return Ok(responseDto);
         }
         catch (Exception ex)
@@ -50,7 +45,7 @@ public class ReviewController : ControllerBase
                 TextOfReview = requestDto.TextOfReview,
                 Rating = requestDto.Rating,
                 SenderId = requestDto.SenderId,
-                DateDeal = requestDto.DateDeal,
+                DateOfReview = requestDto.DateOfReview,
                 RecieverId = requestDto.RecieverId,
             };
 
@@ -85,7 +80,7 @@ public class ReviewController : ControllerBase
             if (reviewId != requestDto.ReviewId)
                 return BadRequest("Provided ReviewId does not match the route parameter.");
 
-            await _reviewService.ChangeReview(int reviewId);
+            await _reviewService.ChangeReview(reviewId, requestDto.TextOfReview, requestDto.Rating);
             return Ok();
         }
         catch (Exception ex)

@@ -11,6 +11,7 @@ public class ReviewMapper : Profile
     {
         CreateMap<ReviewModel, GetReviewResponseDto>();
         CreateMap<AddNewReviewRequestDto, ReviewModel>();
+
         // Добавьте другие необходимые маппинги, если есть
     }
 }

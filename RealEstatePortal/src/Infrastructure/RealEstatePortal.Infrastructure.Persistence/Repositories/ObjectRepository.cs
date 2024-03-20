@@ -1,55 +1,67 @@
-﻿using RealEstatePortal.Application.Abstractions.RepoInterfaces;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using RealEstatePortal.Application.Abstractions.RepoInterfaces;
+using RealEstatePortal.Application.Models.Models;
 using RealEstatePortal.Infrastructure.Persistence.Contexts;
+using RealEstatePortal.Infrastructure.Persistence.Entity;
 
 namespace RealEstatePortal.Infrastructure.Persistence.Repositories;
 
 public class ObjectRepository : IObjectRepository
 {
-    private readonly ApplicationDbContext _context; 
+    private readonly ApplicationDbContext _context;
+    private readonly IMapper _mapper;
 
-    public ObjectRepository(ApplicationDbContext context)
+    public ObjectRepository(ApplicationDbContext context, IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
-    public async Task<string> CreateObject(ObjectModel objectModel)
+    public async Task<Guid> CreateObject(ObjectModel objectModel)
     {
         var newObjectEntity = new ObjectEntity
         {
-            Id = Generator.GenerateRandomId(),
-            Price = objectModel.GetPrice(),
-            Seller = objectModel.GetId()
+            ObjectId = Guid.NewGuid(),
+            SellerId = objectModel.SellerId,
+            RealtorId = objectModel.RealtorId,
+            Square = objectModel.Square,
+            Area = objectModel.Area,
+            RoomNumber = objectModel.RoomNumber,
+            ObjectStatusId = objectModel.ObjectStatusId,
+
+            // цена
         };
 
         await _context.Object.AddAsync(newObjectEntity);
         await _context.SaveChangesAsync();
-        return newObjectEntity.Id;
+        return newObjectEntity.ObjectId;
     }
 
-    public async Task<Int16<ObjectModel>> FindObjectById(int objectId)
+    public async Task<ObjectModel> FindObjectById(Guid objectId)
     {
-        var objectEntity = await _context.Object.FirstOrDefaultAsync(t: objectEntity => t.Id == objectId);
-        return (objectEntity != null ? EntityMapper.MapObjectEntityToModel(objectEntity) : null)!;
+        ObjectEntity? objectEntity = await _context.Object.FirstOrDefaultAsync(t => t.ObjectId == objectId);
+        return (objectEntity != null ? _mapper.Map<ObjectModel>(objectEntity) : null)!;
     }
 
     public async Task UpdateObject(ObjectModel objModel)
     {
-        var existingObjectEntity = await _context.Object.FirstOrDefaultAsync(t => t.Id == obj.Id);
-    
+        ObjectEntity? existingObjectEntity = await _context.Object.FirstOrDefaultAsync(t => t.ObjectId == objModel.ObjectId);
+
         if (existingObjectEntity != null)
         {
-            existingObjectEntity.Price = obj.GetPrice();
-            existingObjectEntity.Seller = obj.GetSellerId();
+            existingObjectEntity.RealtorId = objModel.RealtorId;
+            existingObjectEntity.ObjectStatusId = objModel.ObjectStatusId;
 
             _context.Object.Update(existingObjectEntity);
             await _context.SaveChangesAsync();
         }
     }
 
-    public async Task DeleteObject(int objectId)
+    public async Task DeleteObject(Guid objectId)
     {
-        var objectEntity = await _context.Object.FirstOrDefaultAsync(t => t.Id == objectId);
-    
+        ObjectEntity? objectEntity = await _context.Object.FirstOrDefaultAsync(t => t.ObjectId == objectId);
+
         if (objectEntity != null)
         {
             _context.Object.Remove(objectEntity);

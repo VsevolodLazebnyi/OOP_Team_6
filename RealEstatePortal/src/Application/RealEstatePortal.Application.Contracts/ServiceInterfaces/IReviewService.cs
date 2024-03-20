@@ -4,17 +4,17 @@ namespace RealEstatePortal.Application.Contracts.ServiceInterfaces;
 
 public interface IReviewService
 {
-    void GetReviewAsync(int reviewId);
+    Task<ReviewModel> GetReviewAsync(Guid reviewId);
 
-    Task AddNewReview(ReviewModel reviewModel);
+    Task<Guid> AddNewReview(ReviewModel reviewModel);
 
-    Task PutUserToReview(int reviewId, int userId);
+    Task PutUserToReview(Guid reviewId, Guid userId);
 
-    Task PutReviewToObject(int reviewId, int objectId);
+    Task PutReviewToObject(Guid reviewId, Guid recieverId);
 
-    Task ChangeReview(int reviewId);
+    Task ChangeReview(Guid reviewId, string textOfReview, int rating);
 
-    Task PutReviewToUser(int reviewId, int objectId, int userId);
+    Task PutReviewToUser(Guid reviewId, Guid objectId, Guid userId);
 
-    Task DeleteReview(Guid reviewId, int requestDtoSenderId);
+    Task DeleteReview(Guid reviewId, Guid requestDtoSenderId);
 }

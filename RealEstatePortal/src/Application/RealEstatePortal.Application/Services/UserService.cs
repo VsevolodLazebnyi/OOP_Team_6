@@ -13,50 +13,54 @@ public class UserService : IUserService
         _userRepository = userRepository;
     }
 
-    public async Task<UserModel> GetUserAsync(int userId)
+    public async Task<UserModel> GetUserAsync(Guid userId)
     {
-        var user = await _userRepository.FindUserById(userId);
+        UserModel user = await _userRepository.FindUserById(userId);
+        if (user == null)
+        {
+            throw new Exception($"Object with such ID not found");
+        }
 
         return user;
     }
 
-    public async Task AddNewUser(UserModel userModel)
+    public async Task<Guid> AddNewUser(UserModel userModel)
     {
-        var id = await _userRepository.CreateUser(userModel);
+        Guid id = await _userRepository.CreateUser(userModel);
+        return id;
     }
 
-    public async Task DeleteUser(int userId)
+    public async Task DeleteUser(Guid userId)
     {
         await _userRepository.DeleteUser(userId);
     }
 
-    public async Task GetUserData(int userId)
+    public async Task<UserModel> GetUserData(Guid userId)
     {
-        var user = await _userRepository.FindUserById(userId);
+        UserModel user = await _userRepository.FindUserById(userId);
         if (user == null)
         {
             throw new Exception($"User with ID {userId} not found");
         }
+
         return user;
     }
 
-    public async Task ChangeUserData(int userId)
+    public async Task ChangeUserData(Guid userId, string name, string surname, string email, string phone, int roleId)
     {
-        var user = await _userRepository.FindUserById(userModel.Id);
-            if (user == null)
+        UserModel user = await _userRepository.FindUserById(userId);
+        if (user == null)
             {
-                throw new Exception($"User with ID {userModel.Id} not found");
+                throw new Exception($"User with ID {userId} not found");
             }
 
-            // Обновляем данные пользователя
-            user.Username = userModel.GetUsername();
-            user.Name = userModel.GetName();
-            user.Surname = userModel.GetSurname();
-            user.Phone = userModel.GetPhone();
-            user.Email = userModel.GetEmail();
-            user.Role = userModel.GetRole();
+            // user.Username = userModel.Username;
+        user.Name = name;
+        user.Surname = surname;
+        user.Phone = phone;
+        user.Email = email;
+        user.RoleId = roleId;
 
-            // Вызываем метод репозитория для обновления пользователя
-            await _userRepository.UpdateUser(user);
+        await _userRepository.UpdateUser(user);
     }
 }

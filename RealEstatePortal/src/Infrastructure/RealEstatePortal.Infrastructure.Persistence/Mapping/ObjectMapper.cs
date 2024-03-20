@@ -11,6 +11,7 @@ public class ObjectMapper : Profile
     {
         CreateMap<ObjectModel, GetObjectResponseDto>();
         CreateMap<AddNewObjectRequestDto, ObjectModel>();
+
         // Добавьте другие необходимые маппинги, если есть
     }
 }

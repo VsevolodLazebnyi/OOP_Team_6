@@ -1,6 +1,6 @@
 ﻿namespace RealEstatePortal.Application.Models.Dto.User.GetUser;
 
-public class GetUserResponseDto(string name, string surname, string email, string phone, string roleId)
+public class GetUserResponseDto(string name, string surname, string email, string phone, int roleId)
 {
     public string Name { get; set; } = name;
 
@@ -10,5 +10,5 @@ public class GetUserResponseDto(string name, string surname, string email, strin
 
     public string Phone { get; set; } = phone;
 
-    public string RoleId { get; set; } = roleId;
+    public int RoleId { get; set; } = roleId;
 }

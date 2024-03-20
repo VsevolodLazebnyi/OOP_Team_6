@@ -35,7 +35,7 @@ public class DealService : IDealService
         await _dealRepository.DeleteDeal(dealId);
     }
 
-    public async Task PutRealtorToDeal(Guid dealId, int userId)
+    public async Task PutRealtorToDeal(Guid dealId, Guid userId)
     {
         DealModel deal = await _dealRepository.FindDealById(dealId);
         if (deal != null)
@@ -49,14 +49,14 @@ public class DealService : IDealService
         }
     }
 
-    public async Task<DealModel> GetDealStatus(int dealId)
+    public async Task<int> GetDealStatus(Guid dealId)
     {
         DealModel deal = await _dealRepository.FindDealById(dealId);
 
-        return deal.Status;
+        return deal.DealStatusId;
     }
 
-    public async Task<int> GetBuyerOfDeal(int dealId)
+    public async Task<Guid> GetBuyerOfDeal(Guid dealId)
     {
         DealModel deal = await _dealRepository.FindDealById(dealId);
         if (deal == null)
@@ -64,6 +64,6 @@ public class DealService : IDealService
             throw new Exception($"Object with ID {dealId} not found");
         }
 
-        return deal.UserId;
+        return deal.CustomerId;
     }
 }

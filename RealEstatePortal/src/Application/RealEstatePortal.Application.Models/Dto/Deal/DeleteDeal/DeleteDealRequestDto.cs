@@ -1,6 +1,6 @@
 ﻿namespace RealEstatePortal.Application.Models.Dto.Deal.DeleteDeal;
 
-public class DeleteDealRequestDto(int dealId)
+public class DeleteDealRequestDto(Guid dealId)
 {
-    public int DealId { get; set; } = dealId;
+    public Guid DealId { get; set; } = dealId;
 }

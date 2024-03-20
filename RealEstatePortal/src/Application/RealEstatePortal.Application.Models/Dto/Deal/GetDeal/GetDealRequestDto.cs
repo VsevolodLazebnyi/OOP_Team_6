@@ -1,6 +1,6 @@
 ﻿namespace RealEstatePortal.Application.Models.Dto.Deal.GetDeal;
 
-public class GetDealRequestDto(int dealId)
+public class GetDealRequestDto(Guid dealId)
 {
-    public int DealId { get; set; } = dealId;
+    public Guid DealId { get; set; } = dealId;
 }

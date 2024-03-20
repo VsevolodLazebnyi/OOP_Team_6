@@ -2,11 +2,11 @@
 namespace RealEstatePortal.Application.Models.Dto.Object.ChangeObject;
 #pragma warning restore CA1716
 
-public class ChangeObjectRequestDto(Guid objectId, int realtorId, int square, string area, int roomNumber, int objectStatusId)
+public class ChangeObjectRequestDto(Guid objectId, Guid realtorId, int square, string area, int roomNumber, int objectStatusId)
 {
     public Guid ObjectId { get; set; } = objectId;
 
-    public int RealtorId { get; set; } = realtorId;
+    public Guid RealtorId { get; set; } = realtorId;
 
     public int Square { get; set; } = square;
 

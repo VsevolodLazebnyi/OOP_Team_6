@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using RealEstatePortal.Application.Contracts.ServiceInterfaces;
 using RealEstatePortal.Application.Models.Dto.User.CreateUser;
-using RealEstatePortal.Application.Models.Dto.User.DeleteUser;
 using RealEstatePortal.Application.Models.Dto.User.GetUser;
 using RealEstatePortal.Application.Models.Models;
 
@@ -22,7 +21,7 @@ public class UserController : Controller
     }
 
     [HttpGet("{userId}")]
-    public async Task<ActionResult<GetUserResponseDto>> GetUserAsync(int userId)
+    public async Task<ActionResult<GetUserResponseDto>> GetUserAsync(Guid userId)
     {
         try
         {
@@ -43,7 +42,8 @@ public class UserController : Controller
         {
             UserModel userModel = _mapper.Map<UserModel>(request);
             Guid userId = await _userService.AddNewUser(userModel);
-            var responseDto = new CreateUserResponseDto { UserId = userId };
+            var responseDto = new CreateUserResponseDto(userId);
+            Console.WriteLine(userModel.Name);
             return Ok(responseDto);
         }
         catch (Exception ex)
@@ -53,7 +53,7 @@ public class UserController : Controller
     }
 
     [HttpDelete("{userId}")]
-    public async Task<ActionResult> DeleteUser(int userId)
+    public async Task<ActionResult> DeleteUser(Guid userId)
     {
         try
         {

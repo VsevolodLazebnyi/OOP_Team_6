@@ -4,13 +4,13 @@ namespace RealEstatePortal.Application.Contracts.ServiceInterfaces;
 
 public interface IUserService
 {
-    Task<UserModel> GetUserAsync(int userId);
+    Task<UserModel> GetUserAsync(Guid userId);
 
-    Task AddNewUser(UserModel userModel);
+    Task<Guid> AddNewUser(UserModel userModel);
 
-    Task DeleteUser(int userId);
+    Task DeleteUser(Guid userId);
 
-    Task GetUserData(int userId);
+    Task<UserModel> GetUserData(Guid userId);
 
-    Task ChangeUserData(int userId);
+    Task ChangeUserData(Guid userId, string name, string surname, string email, string phone, int roleId);
 }

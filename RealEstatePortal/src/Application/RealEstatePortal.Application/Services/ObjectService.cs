@@ -9,19 +9,15 @@ public class ObjectService : IObjectService
     private readonly IObjectRepository _objectRepository;
     private readonly IUserRepository _userRepository;
 
-    public ObjectService(IObjectRepository objectRepository)
+    public ObjectService(IObjectRepository objectRepository, IUserRepository userRepository)
     {
         _objectRepository = objectRepository;
-    }
-    
-    public UserService(IUserRepository userRepository)
-    {
         _userRepository = userRepository;
     }
 
-    public async Task<ObjectModel> GetObjectAsync(int objectId)
+    public async Task<ObjectModel> GetObjectAsync(Guid objectId)
     {
-        var obj = await _objectRepository.FindObjectById(objectId);
+        ObjectModel obj = await _objectRepository.FindObjectById(objectId);
         if (obj == null)
         {
             throw new Exception($"Object with such ID not found");
@@ -30,24 +26,24 @@ public class ObjectService : IObjectService
         return obj;
     }
 
-    public async Task AddNewObject(ObjectModel objectModel)
+    public async Task<Guid> AddNewObject(ObjectModel objectModel)
     {
-        var id = await _objectRepository.CreateObject(objectModel);
+        Guid id = await _objectRepository.CreateObject(objectModel);
+        return id;
     }
 
-    public async Task DeleteObject(Guid guid, int objectId)
+    public async Task DeleteObject(Guid objectId)
     {
         await _objectRepository.DeleteObject(objectId);
     }
 
-    public async Task PutRealtorToObject(int objectId, int userId)
+    public async Task PutRealtorToObject(Guid objectId, Guid userId)
     {
-        var obj = await _objectRepository.FindObjectById(objectId);
+        ObjectModel obj = await _objectRepository.FindObjectById(objectId);
         if (obj != null)
         {
-            // Устанавливаем RealtorId для объекта
-            obj.UserId = userId;
-            await _objectRepository.UpdateObject(obj); // Обновляем объект
+            obj.RealtorId = userId;
+            await _objectRepository.UpdateObject(obj);
         }
         else
         {
@@ -55,20 +51,20 @@ public class ObjectService : IObjectService
         }
     }
 
-    public async Task GetSellerOfObject(int objectId, int userId)
+    public async Task<UserModel> GetSellerOfObject(Guid objectId, Guid userId)
     {
-        var obj = await _objectRepository.FindObjectById(objectId);
+        ObjectModel obj = await _objectRepository.FindObjectById(objectId);
         if (obj == null)
         {
             throw new Exception($"Object with ID {objectId} not found");
         }
 
-        if (obj.UserId != userId)
+        if (obj.SellerId != userId)
         {
             throw new Exception($"User with ID {userId} is not the seller of object with ID {objectId}");
         }
 
-        var seller = await _userRepository.FindUserById(userId);
+        UserModel seller = await _userRepository.FindUserById(userId);
         if (seller == null)
         {
             throw new Exception($"Seller with ID {userId} not found");
@@ -77,21 +73,21 @@ public class ObjectService : IObjectService
         return seller;
     }
 
-    public async Task ChangeRealtorToObject(int objectId, int userId)
+    public async Task ChangeRealtorToObject(Guid objectId, Guid userId)
     {
-        var obj = await _objectRepository.FindObjectById(objectId);
+        ObjectModel obj = await _objectRepository.FindObjectById(objectId);
         if (obj == null)
         {
             throw new Exception($"Object with ID {objectId} not found");
         }
 
-        var user = await _userRepository.FindUserById(userId);
+        UserModel user = await _userRepository.FindUserById(userId);
         if (user == null)
         {
             throw new Exception($"User with ID {userId} not found");
         }
 
-        obj.UserId = userId;
+        obj.RealtorId = userId;
         await _objectRepository.UpdateObject(obj);
     }
 }
