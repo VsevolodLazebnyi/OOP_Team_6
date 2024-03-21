@@ -9,7 +9,7 @@ namespace RealEstatePortal.Infrastructure.Persistence.Repositories;
 
 public class UserRepository : IUserRepository
 {
-    private readonly ApplicationDbContext _context; // Замените YourDbContext на ваш контекст базы данных
+    private readonly ApplicationDbContext _context;
     private readonly IMapper _mapper;
 
     public UserRepository(ApplicationDbContext context, IMapper mapper)

@@ -43,7 +43,6 @@ public class UserController : Controller
             UserModel userModel = _mapper.Map<UserModel>(request);
             Guid userId = await _userService.AddNewUser(userModel);
             var responseDto = new CreateUserResponseDto(userId);
-            Console.WriteLine(userModel.Name);
             return Ok(responseDto);
         }
         catch (Exception ex)

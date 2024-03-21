@@ -1,7 +1,10 @@
-﻿namespace RealEstatePortal.Infrastructure.Persistence.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RealEstatePortal.Infrastructure.Persistence.Entity;
 
 public class UserEntity
 {
+    [Key]
     public Guid UserId { get; set; }
 
     public string Name { get; set; } = string.Empty;

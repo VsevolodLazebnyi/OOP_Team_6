@@ -1,34 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\RealEstatePortal.Presentation.Http.csproj": {}
+    "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\RealEstatePortal.Presentation.Http.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj": {
+    "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj",
+        "projectUniqueName": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj",
         "projectName": "RealEstatePortal.Application.Abstractions",
-        "projectPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj",
-        "packagesPath": "C:\\Users\\Vllazebnyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\obj\\",
+        "projectPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\Арина\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
-          "C:\\Users\\Vllazebnyi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Арина\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj": {
-                "projectPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj"
+              "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj": {
+                "projectPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj"
               }
             }
           }
@@ -147,6 +149,7 @@
             "Microsoft.EntityFrameworkCore": "[7.0.10, )",
             "Microsoft.EntityFrameworkCore.Design": "[7.0.10, )",
             "Microsoft.EntityFrameworkCore.Tools": "[7.0.10, )",
+            "Microsoft.Extensions.Configuration": "[8.0.0, )",
             "Microsoft.Extensions.DependencyInjection.Abstractions": "[8.0.0, )",
             "Microsoft.Extensions.Options.ConfigurationExtensions": "[8.0.0, )",
             "Npgsql.EntityFrameworkCore.PostgreSQL": "[7.0.4, )",
@@ -171,38 +174,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Vllazebnyi\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj": {
+    "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj",
         "projectName": "RealEstatePortal.Application.Contracts",
-        "projectPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj",
-        "packagesPath": "C:\\Users\\Vllazebnyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\obj\\",
+        "projectPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Арина\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
-          "C:\\Users\\Vllazebnyi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Арина\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj": {
-                "projectPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj"
+              "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Abstractions\\RealEstatePortal.Application.Abstractions.csproj"
               },
-              "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj": {
-                "projectPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj"
+              "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj": {
+                "projectPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj"
               }
             }
           }
@@ -321,6 +326,7 @@
             "Microsoft.EntityFrameworkCore": "[7.0.10, )",
             "Microsoft.EntityFrameworkCore.Design": "[7.0.10, )",
             "Microsoft.EntityFrameworkCore.Tools": "[7.0.10, )",
+            "Microsoft.Extensions.Configuration": "[8.0.0, )",
             "Microsoft.Extensions.DependencyInjection.Abstractions": "[8.0.0, )",
             "Microsoft.Extensions.Options.ConfigurationExtensions": "[8.0.0, )",
             "Npgsql.EntityFrameworkCore.PostgreSQL": "[7.0.4, )",
@@ -345,27 +351,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Vllazebnyi\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj": {
+    "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj",
         "projectName": "RealEstatePortal.Application.Models",
-        "projectPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj",
-        "packagesPath": "C:\\Users\\Vllazebnyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\obj\\",
+        "projectPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj",
+        "packagesPath": "C:\\Users\\Арина\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
-          "C:\\Users\\Vllazebnyi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Арина\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -488,6 +496,7 @@
             "Microsoft.EntityFrameworkCore": "[7.0.10, )",
             "Microsoft.EntityFrameworkCore.Design": "[7.0.10, )",
             "Microsoft.EntityFrameworkCore.Tools": "[7.0.10, )",
+            "Microsoft.Extensions.Configuration": "[8.0.0, )",
             "Microsoft.Extensions.DependencyInjection.Abstractions": "[8.0.0, )",
             "Microsoft.Extensions.Options.ConfigurationExtensions": "[8.0.0, )",
             "Npgsql.EntityFrameworkCore.PostgreSQL": "[7.0.4, )",
@@ -512,38 +521,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Vllazebnyi\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\RealEstatePortal.Presentation.Http.csproj": {
+    "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\RealEstatePortal.Presentation.Http.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\RealEstatePortal.Presentation.Http.csproj",
+        "projectUniqueName": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\RealEstatePortal.Presentation.Http.csproj",
         "projectName": "RealEstatePortal.Presentation.Http",
-        "projectPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\RealEstatePortal.Presentation.Http.csproj",
-        "packagesPath": "C:\\Users\\Vllazebnyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\obj\\",
+        "projectPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\RealEstatePortal.Presentation.Http.csproj",
+        "packagesPath": "C:\\Users\\Арина\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Presentation\\RealEstatePortal.Presentation.Http\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
-          "C:\\Users\\Vllazebnyi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Арина\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj": {
-                "projectPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj"
+              "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj": {
+                "projectPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Contracts\\RealEstatePortal.Application.Contracts.csproj"
               },
-              "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj": {
-                "projectPath": "C:\\Users\\Vllazebnyi\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj"
+              "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj": {
+                "projectPath": "C:\\Users\\Арина\\OOP_Team_6\\RealEstatePortal\\src\\Application\\RealEstatePortal.Application.Models\\RealEstatePortal.Application.Models.csproj"
               }
             }
           }
@@ -662,6 +673,7 @@
             "Microsoft.EntityFrameworkCore": "[7.0.10, )",
             "Microsoft.EntityFrameworkCore.Design": "[7.0.10, )",
             "Microsoft.EntityFrameworkCore.Tools": "[7.0.10, )",
+            "Microsoft.Extensions.Configuration": "[8.0.0, )",
             "Microsoft.Extensions.DependencyInjection.Abstractions": "[8.0.0, )",
             "Microsoft.Extensions.Options.ConfigurationExtensions": "[8.0.0, )",
             "Npgsql.EntityFrameworkCore.PostgreSQL": "[7.0.4, )",
@@ -689,7 +701,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Vllazebnyi\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

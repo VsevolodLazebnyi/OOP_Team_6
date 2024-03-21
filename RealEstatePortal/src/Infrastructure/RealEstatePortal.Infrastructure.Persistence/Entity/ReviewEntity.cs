@@ -1,7 +1,10 @@
-﻿namespace RealEstatePortal.Infrastructure.Persistence.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RealEstatePortal.Infrastructure.Persistence.Entity;
 
 public class ReviewEntity
 {
+    [Key]
     public Guid ReviewId { get; set; }
 
     public string TextOfReview { get; set; } = string.Empty;

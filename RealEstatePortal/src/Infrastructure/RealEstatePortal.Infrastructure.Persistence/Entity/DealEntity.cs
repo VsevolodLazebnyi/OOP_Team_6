@@ -1,7 +1,10 @@
-﻿namespace RealEstatePortal.Infrastructure.Persistence.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RealEstatePortal.Infrastructure.Persistence.Entity;
 
 public class DealEntity
 {
+    [Key]
     public Guid DealId { get; set; }
 
     public Guid ObjectId { get; set; }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RealEstatePortal.Presentation.Http")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3820c482ab8d5b2fae0349576a7f159534946131")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e20ccb63a2221db80f2ba947e23abd98456a645f")]
 [assembly: System.Reflection.AssemblyProductAttribute("RealEstatePortal.Presentation.Http")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RealEstatePortal.Presentation.Http")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
